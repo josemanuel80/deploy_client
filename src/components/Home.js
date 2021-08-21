@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { deleteById, newData, putData } from '../lib/fetch.js';
-import { Link, useParams } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import '../style/home.css';
 import { fetchData } from '../lib/fetch.js';
 
@@ -80,7 +80,6 @@ export const Home = () => {
               return (
                 <>
                   <ul key={i}>
-                    {/* <p>{e._id}</p> */}
                     <li>{e.data1}</li>
                     <li>{e.data2} años</li>
                     <button onClick={handleEdit} id={i}>

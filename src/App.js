@@ -8,7 +8,6 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
-        {/* <Header /> */}
         <Switch>
           <Route exact path="/" component={Home} />
           <Route path="/list" component={List} />

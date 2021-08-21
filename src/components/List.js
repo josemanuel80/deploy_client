@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { fetchData, deleteById } from '../lib/fetch.js';
+import { fetchData } from '../lib/fetch.js';
 import { Link } from 'react-router-dom';
 
 export const List = () => {
