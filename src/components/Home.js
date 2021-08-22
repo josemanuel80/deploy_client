@@ -6,11 +6,13 @@ import { fetchData } from '../lib/fetch.js';
 
 export const Home = () => {
   const [item, setItem] = useState([]);
+  const [loading, setloading] = useState(true);
 
   // Se hace el fetch de los datos.
   const listItems = async () => {
     const listed = await fetchData();
     setItem(listed);
+    setloading(false);
     return listed;
   };
   useEffect(() => {
@@ -28,6 +30,7 @@ export const Home = () => {
     const { data1, data2 } = data;
     if (data1 !== '') {
       const dataCreated = await newData(data1, data2);
+
       window.location.reload();
       return dataCreated;
     }
@@ -61,6 +64,7 @@ export const Home = () => {
     <div className="wrapper">
       <div className="main">
         <Link to={'/list'}>Ver contenido de la base de datos</Link>;<br></br>
+        {loading && <h3>Cargando base de datos</h3>}
         <br></br>
         <form onSubmit={handleSubmit}>
           <p>Nombre</p>
