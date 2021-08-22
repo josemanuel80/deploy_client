@@ -83,7 +83,7 @@ export const Home = () => {
             value={data.data2}
             onChange={handleChange}
           />
-          <button onClick={handleSubmit}>Enviar</button>
+          <button onClick={handleSubmit}>Crear</button>
 
           <br></br>
           <ul>
