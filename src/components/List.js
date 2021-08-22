@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 export const List = () => {
   const [item, setItem] = useState([]);
   const listItems = async () => {
+    //realiza el fetch en la base de datos.
     const listed = await fetchData();
     setItem(listed);
     return listed;

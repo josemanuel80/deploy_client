@@ -7,6 +7,7 @@ import { fetchData } from '../lib/fetch.js';
 export const Home = () => {
   const [item, setItem] = useState([]);
 
+  // Se hace el fetch de los datos.
   const listItems = async () => {
     const listed = await fetchData();
     setItem(listed);
@@ -16,11 +17,12 @@ export const Home = () => {
     listItems();
   }, []);
 
+  // Se inicializan los valores.
   const [data, setData] = useState({
     data1: '',
     data2: 0,
   });
-
+  // Crea los datos en la base de datos.
   const handleSubmit = async (event) => {
     event.preventDefault();
     const { data1, data2 } = data;
@@ -30,18 +32,23 @@ export const Home = () => {
       return dataCreated;
     }
   };
+  // Toma los datos de los inputs.
   const handleChange = (event) => {
     event.preventDefault();
     const { name, value } = event.currentTarget;
     const allData = { ...data, [name]: value };
     setData(allData);
   };
+
+  // Actualiza datos existentes
   const handleEdit = async (event) => {
     const { id } = event.currentTarget;
     const putTheData = await putData(item[id]._id);
     console.log(putTheData);
     deleteById(item[id]._id);
   };
+
+  // Borra los datos
   const handleDelete = async (event) => {
     event.preventDefault();
     const { id } = event.currentTarget;
