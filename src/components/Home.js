@@ -64,7 +64,7 @@ export const Home = () => {
     <div className="wrapper">
       <div className="main">
         <Link to={'/list'}>Ver contenido de la base de datos</Link>;<br></br>
-        {loading && <h3>Cargando base de datos...</h3>}
+        {loading && <h3>Cargando base de datos</h3>}
         <br></br>
         <form onSubmit={handleSubmit}>
           <p>Nombre</p>
