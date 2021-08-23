@@ -62,6 +62,17 @@ export const Home = () => {
 
   return (
     <div className="wrapper">
+      <div className="text">
+        <h3>
+          Introduzca los datos de "nombre" y "edad". El programa funciona con un
+          servidor desplegado
+        </h3>
+        <h3>
+          {' '}
+          en Heroku conectado a su vez a una base de datos en Mongo Atlas, del
+          cual puede ver su estado en cada momento.
+        </h3>
+      </div>
       <div className="main">
         <Link to={'/list'}>Ver contenido de la base de datos</Link>;<br></br>
         {loading && <h3>Cargando base de datos</h3>}
