@@ -99,6 +99,8 @@ export const Home = () => {
             value={data.data2}
             onChange={handleChange}
           />
+          <br></br>
+          <br></br>
           <button onClick={handleSubmit}>Crear</button>
           <br></br>
         </form>
