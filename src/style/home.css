@@ -8,9 +8,10 @@
   height: 100%;
 }
 .main {
+  display: flex;
   margin-top: 3rem;
   margin-left: 25rem;
-  width: 20rem;
+  width: 60rem;
 }
 .input {
   margin: 50px;
@@ -18,4 +19,11 @@
 .text {
   margin-top: 2rem;
   margin-left: 5rem;
+}
+.res {
+  align-items: center;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  width: 60vw;
+  height: 60vh;
 }
