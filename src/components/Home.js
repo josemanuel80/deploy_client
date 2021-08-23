@@ -66,6 +66,7 @@ export const Home = () => {
         <Link to={'/list'}>Ver contenido de la base de datos</Link>;<br></br>
         {loading && <h3>Cargando base de datos</h3>}
         <br></br>
+        <br></br>
         <form onSubmit={handleSubmit}>
           <p>Nombre</p>
           <input
@@ -83,6 +84,7 @@ export const Home = () => {
             value={data.data2}
             onChange={handleChange}
           />
+
           <button onClick={handleSubmit}>Crear</button>
 
           <br></br>

@@ -1,0 +1,18 @@
+.listWrapper {
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 80rem;
+  background-image: url('../assets/Fondo.jpg');
+  background-size: cover;
+  text-align: center;
+  font-size: x-large;
+  font-weight: 900;
+}
+.volver {
+  font-size: x-large;
+  font-weight: 900;
+  padding-top: 10rem;
+}

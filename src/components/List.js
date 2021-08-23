@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { fetchData } from '../lib/fetch.js';
 import { Link } from 'react-router-dom';
+import '../style/List.css';
 
 export const List = () => {
   const [item, setItem] = useState([]);
@@ -16,18 +17,22 @@ export const List = () => {
   }, []);
   return (
     <>
-      <Link to={'/'}>Volver</Link>
-      <br></br>
+      <div className="listWrapper">
+        <div className="volver">
+          <Link to={'/'}>Volver</Link>
+        </div>
+        <br></br>
 
-      <ul>
-        {item.map((e, i) => {
-          return (
-            <ul key={i}>
-              <li>{JSON.stringify(e)}</li>
-            </ul>
-          );
-        })}
-      </ul>
+        <ul>
+          {item.map((e, i) => {
+            return (
+              <ul key={i}>
+                <li>{JSON.stringify(e)}</li>
+              </ul>
+            );
+          })}
+        </ul>
+      </div>
     </>
   );
 };
