@@ -63,6 +63,9 @@ export const Home = () => {
   return (
     <div className="wrapper">
       <div className="text">
+        <a href="http://josemanuelcastellano.com">
+          <h3>Inicio</h3>
+        </a>
         <h3>
           Introduzca los datos de "nombre" y "edad". El programa funciona con un
           servidor desplegado
