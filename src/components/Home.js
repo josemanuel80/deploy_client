@@ -76,34 +76,34 @@ export const Home = () => {
           cual puede ver su estado en cada momento.
         </h3>
       </div>
-      <div className="main">
-        <form onSubmit={handleSubmit}>
-          <Link to={'/list'}>Ver contenido de la base de datos</Link>
-          <br></br>
-          {loading && <h3>Cargando base de datos</h3>}
-          <br></br>
-          <br></br>
-          <p>Nombre</p>
-          <input
-            placeholder="nombre"
-            type="text"
-            name="data1"
-            value={data.data1}
-            onChange={handleChange}
-          />
-          <br></br>
-          <p>Edad</p>
-          <input
-            type="text"
-            name="data2"
-            value={data.data2}
-            onChange={handleChange}
-          />
-          <br></br>
-          <br></br>
-          <button onClick={handleSubmit}>Crear</button>
-          <br></br>
-        </form>
+
+      <form onSubmit={handleSubmit} className="form">
+        <Link to={'/list'}>Ver contenido de la base de datos</Link>
+        <br></br>
+        {loading && <h3>Cargando base de datos</h3>}
+        <br></br>
+        <br></br>
+        <p>Nombre</p>
+        <input
+          placeholder="nombre"
+          type="text"
+          name="data1"
+          value={data.data1}
+          onChange={handleChange}
+        />
+        <br></br>
+        <p>Edad</p>
+        <input
+          type="text"
+          name="data2"
+          value={data.data2}
+          onChange={handleChange}
+        />
+        <br></br>
+        <br></br>
+        <button onClick={handleSubmit}>Crear</button>
+        <br></br>
+
         <div className="res">
           <ul>
             {item.map((e, i) => {
@@ -124,7 +124,7 @@ export const Home = () => {
             })}
           </ul>
         </div>
-      </div>
+      </form>
     </div>
   );
 };
