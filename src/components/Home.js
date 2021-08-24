@@ -62,21 +62,16 @@ export const Home = () => {
 
   return (
     <div className="wrapper">
-      <div className="text">
-        <a href="http://josemanuelcastellano.com">
-          <h3>Inicio</h3>
-        </a>
-        <h3>
+      <a href="http://josemanuelcastellano.com">
+        <h3>Inicio</h3>
+      </a>
+      <p>
+        <b>
           Introduzca los datos de "nombre" y "edad". El programa funciona con un
-          servidor desplegado
-        </h3>
-        <h3>
-          {' '}
-          en Heroku conectado a su vez a una base de datos en Mongo Atlas, del
-          cual puede ver su estado en cada momento.
-        </h3>
-      </div>
-
+          servidor desplegado en Heroku conectado a su vez a una base de datos
+          en Mongo Atlas, del cual puede ver su estado en cada momento.
+        </b>
+      </p>
       <form onSubmit={handleSubmit} className="form">
         <Link to={'/list'}>Ver contenido de la base de datos</Link>
         <br></br>
