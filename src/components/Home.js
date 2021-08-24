@@ -100,24 +100,24 @@ export const Home = () => {
         <br></br>
 
         <div className="res">
-          <ul>
-            {item.map((e, i) => {
-              return (
-                <>
-                  <ul key={i}>
-                    <li>{e.data1}</li>
-                    <li>{e.data2} años</li>
-                    <button onClick={handleEdit} id={i}>
-                      editar
-                    </button>
-                    <button onClick={handleDelete} id={i}>
-                      Borrar
-                    </button>
-                  </ul>
-                </>
-              );
-            })}
-          </ul>
+          {item.map((e, i) => {
+            return (
+              <>
+                <ul key={i}>
+                  <p>Nombre: {e.data1}</p>
+
+                  <p>Edad: {e.data2} años</p>
+
+                  <button onClick={handleEdit} id={i}>
+                    editar
+                  </button>
+                  <button onClick={handleDelete} id={i}>
+                    Borrar
+                  </button>
+                </ul>
+              </>
+            );
+          })}
         </div>
       </form>
     </div>

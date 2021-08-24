@@ -19,17 +19,13 @@
   margin: 50px;
 }
 .form {
+  align-items: center;
 }
 .text {
   margin-left: 5rem;
   padding: 5rem;
 }
 .res {
-  align-items: center;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  width: 60vw;
-  height: 60vh;
 }
 
 @media screen and (max-width: 500px) {
