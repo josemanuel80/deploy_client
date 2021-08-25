@@ -110,7 +110,7 @@ export const Home = () => {
                 <ul key={i}>
                   <p>Nombre: {e.data1}</p>
 
-                  <p>Edad: {e.data2} años</p>
+                  <p>Edad: {e.data2}</p>
 
                   <button onClick={handleEdit} id={i}>
                     editar
