@@ -52,3 +52,24 @@
     margin: 50px;
   }
 }
+.res {
+  align-items: center;
+  text-align: center;
+  display: flex;
+  width: 50%;
+  height: 20rem;
+  flex-wrap: wrap;
+  margin-left: 25%;
+}
+.dataWrapper {
+  border: 1px solid black;
+  width: 100%;
+  height: 6rem;
+
+  align-items: stretch;
+}
+.divs {
+  border: 1px solid black;
+  height: 6rem;
+  width: 20rem;
+}
