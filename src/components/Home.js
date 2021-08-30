@@ -68,7 +68,7 @@ export const Home = () => {
       <p className="p">
         <b>
           Introduzca los datos de "nombre" y "edad". El programa funciona con un
-          servidor desplegado en Heroku,{' '}
+          servidor desplegado en Heroku,
         </b>
         <p></p>
         <b>
@@ -82,6 +82,7 @@ export const Home = () => {
         {loading && <h3>Cargando base de datos</h3>}
         <br></br>
         <br></br>
+
         <p>Nombre</p>
         <input
           placeholder="nombre"
@@ -101,8 +102,9 @@ export const Home = () => {
         <br></br>
         <br></br>
         <button onClick={handleSubmit}>Crear</button>
-        <br></br>
-
+        <p>
+          <u>Respuesta de la base de datos: </u>
+        </p>
         <div className="res">
           {item.map((e, i) => {
             return (
