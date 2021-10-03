@@ -1,8 +1,9 @@
 import { useEffect, useState } from 'react';
 import { deleteById, newData, putData } from '../lib/fetch.js';
 import { Link } from 'react-router-dom';
-import '../style/home.css';
+import '../style/Home.css';
 import { fetchData } from '../lib/fetch.js';
+import { v4 as uuid } from 'uuid';
 
 export const Home = () => {
   const [item, setItem] = useState([]);
@@ -59,29 +60,23 @@ export const Home = () => {
     window.location.reload();
     return deleteItem;
   };
+  const años = (edad) => {
+    if (edad === 1) {
+      return ' año';
+    } else {
+      return ' años';
+    }
+  };
 
   return (
     <div className="wrapper">
       <a href="http://josemanuelcastellano.com">
         <h3>Inicio</h3>
       </a>
-      <p className="p">
-        <b>
-          Introduzca los datos de "nombre" y "edad". El programa funciona con un
-          servidor desplegado en Heroku,
-        </b>
-        <p></p>
-        <b>
-          conectado a su vez a una base de datos en Mongo Atlas, del cual puede
-          ver su estado en cada momento.
-        </b>
-      </p>
       <form onSubmit={handleSubmit} className="form">
         <Link to={'/list'}>Ver contenido de la base de datos</Link>
         <br></br>
         {loading && <h3>Cargando base de datos</h3>}
-        <br></br>
-        <br></br>
 
         <p>Nombre</p>
         <input
@@ -105,23 +100,24 @@ export const Home = () => {
         <p>
           <u>Respuesta de la base de datos: </u>
         </p>
-        <div className="res">
+
+        <div key={uuid()} className="res">
           {item.map((e, i) => {
             return (
-              <>
-                <ul key={i}>
-                  <p>Nombre: {e.data1}</p>
+              <ul key={uuid()}>
+                <li key={uuid()}>Nombre: {e.data1}</li>
+                <li key={uuid()}>
+                  Edad: {e.data2}
+                  {años(e.data2)}
+                </li>
 
-                  <p>Edad: {e.data2}</p>
-
-                  <button onClick={handleEdit} id={i}>
-                    editar
-                  </button>
-                  <button onClick={handleDelete} id={i}>
-                    Borrar
-                  </button>
-                </ul>
-              </>
+                <button key={uuid()} onClick={handleEdit} id={i}>
+                  editar
+                </button>
+                <button key={uuid()} onClick={handleDelete} id={i}>
+                  Borrar
+                </button>
+              </ul>
             );
           })}
         </div>
