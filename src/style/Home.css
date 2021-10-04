@@ -48,7 +48,7 @@
 }
 
 @media screen and (max-width: 500px) {
-  .wrapper {
+  /*   .wrapper {
     display: flex;
     flex: column;
     flex-wrap: wrap;
@@ -62,5 +62,5 @@
     background-size: cover;
     text-align: center;
     font-size: large;
-  }
+  } */
 }
