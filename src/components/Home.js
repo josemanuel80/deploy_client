@@ -49,6 +49,7 @@ export const Home = () => {
     const { id } = event.currentTarget;
     const putTheData = await putData(item[id]._id);
     console.log(putTheData);
+    setData(item[id]);
     deleteById(item[id]._id);
   };
 
