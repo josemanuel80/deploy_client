@@ -78,6 +78,7 @@ export const Home = () => {
         <Link to={'/list'}>Ver contenido de la base de datos</Link>
         <br></br>
         {loading && <h3>Cargando base de datos</h3>}
+        <h3>Complete los campos "nombre" y "edad"</h3>
 
         <p>Nombre</p>
         <input
